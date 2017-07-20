@@ -1,0 +1,22 @@
+{
+  "name": "speech_coach",
+  "version": "0.0.1",
+  "description": "TJBot Speech coach",
+  "dependencies": {
+    "tjbot": "latest"
+  },
+  "main": "coach.js",
+  "homepage": "https://github.com/joshowbai/HackPP.git",
+  "keywords": [
+    "tjbot"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:joshowbai/HackPP.git"
+  },
+  "scripts": {
+    "start": "node coach.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
