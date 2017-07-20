@@ -16,3 +16,9 @@ exports.credentials.speech_to_text = {
     username: '337ee9e9-c855-43fa-ac7c-53e55f2a6486',
     password: 'tkznZrH10zuy'
 };
+
+exports.credentials.text_to_speech = {
+  url : "https://stream.watsonplatform.net/text-to-speech/api",
+  username : "76b25984-82be-46ce-89ee-b9f50575334d",
+  password : "lKbFVzaIHfbC"
+};

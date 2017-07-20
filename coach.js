@@ -13,16 +13,16 @@ var prevAvg = 0;
 var credentials = config.credentials;
 
 // these are the hardware capabilities that our TJ needs for this recipe
-var hardware = ['led', 'microphone'];
+var hardware = ['led', 'microphone','servo','speaker'];
 
 // set up TJBot's configuration
 var tjConfig = {
     log: {
         level: 'verbose'
-    }/*,
-    listen: {
-		microphoneDeviceId: "plughw:1,0"
-	}*/
+    },
+    speak: {
+		speakerDeviceId: "plughw:1,0"
+	}
 };
 
 // instantiate our TJBot!
@@ -30,9 +30,9 @@ var tj = new TJBot(hardware, tjConfig, credentials);
 
 // full list of colors that TJ recognizes, e.g. ['red', 'green', 'blue']
 var tjColors = tj.shineColors();
-
-console.log("This is an early attempt at calculating WPM based on user input. This initial draft should output the number of words in each individual message.");
-tj.armBack();
+tj.speak("Hi, my name is HackBot, made by Hack++, "
++ "I'm going to be your speech coach");
+tj.raiseArm();
 console.log("Here are all the colors I understand:");
 console.log(tjColors.join(", "));
 
@@ -86,21 +86,25 @@ var timingLoop = setInterval(function() {
     elapsedTime += 5;
   }
   WPM = WPM*60; //Was words per second, now converted into  words per minute.
-  console.log("Calculating WPM to equal ", WPM, " words per minute. Should be 145-160 for the ideal professional speaker.\n\tYour average time overall is ", (WPM+prevAvg)/timerIdx, " words per minute.");
+  var resultant = (WPM+prevAvg)/timerIdx;
+  console.log("Calculating WPM to equal ", WPM, " words per minute. Should be 145-160 for the ideal professional speaker.\n\tYour average time overall is ", resultant, " words per minute.");
   prevAvg = prevAvg+WPM;
+  respond(WPM);
   totalWordCount = 0; 
 }, 5000);
 
-function respond(response){
-	switch(response){
-		case "slow":
-			tj.lowerArm();
-		case "fast":
-			tj.raiseArm();
-		case "hesitation":
-			tj.wave();
-		default:
-			break;
+function respond(result){
+	if (result < 140){
+		tj.speak("speed up a bit");
+		tj.shine('off');
+		tj.lowerArm();
+	}
+	else if (result > 165) {
+		tj.speak('slow down a bit ');
+		tj.shine('off');
+		tj.armBack();
+	}
+	else{
+		tj.shine('red');
 	}
 }
-// Yoel can push now
