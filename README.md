@@ -8,7 +8,7 @@
 	4. Speed
 	5. Includes a breakdown of audio and video playback during the analysis process
 
-*Feel free to contact the teeam with any questions or thoughs
+# Feel free to contact the teeam with any questions or thoughs
 	1. William Merrit William.Merritt@ibm.com
 	2. Joy Onyekachukwu Onyekachukwu.Joy.Onyerikwu@ibm.com / JoyOnyerikwu@outlook.com
 	3. Joshua Bailey Joshua.Bailey1@ibm.com
