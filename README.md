@@ -9,9 +9,9 @@
 	5. Includes a breakdown of audio and video playback during the analysis process
 
 *Feel free to contact the teeam with any questions or thoughs
-	William Merrit William.Merritt@ibm.com
-	Joy Onyekachukwu Onyekachukwu.Joy.Onyerikwu@ibm.com
-	Joshua Bailey Joshua.Bailey1@ibm.com
-	Pascal Bastien Pascal.Bastien@ibm.com
-	Yoel Ben-Avraham Yoel.Ben-Avraham@ibm.com
-	Brianna Malcolm Brianna.Malcolm@ibm.com
+	1. William Merrit William.Merritt@ibm.com
+	2. Joy Onyekachukwu Onyekachukwu.Joy.Onyerikwu@ibm.com / JoyOnyerikwu@outlook.com
+	3. Joshua Bailey Joshua.Bailey1@ibm.com
+	4. Pascal Bastien Pascal.Bastien@ibm.com
+	5. Yoel Ben-Avraham Yoel.Ben-Avraham@ibm.com
+	6. Brianna Malcolm Brianna.Malcolm@ibm.com
